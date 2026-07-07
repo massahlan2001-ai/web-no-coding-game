@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Coding Game - Click & Win!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🎮 No Coding Game</h1>
+        <div class="header-stats">
+            <div class="stat-box">
+                <span class="label">Score:</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Level:</span>
+                <span class="value" id="level">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Lives:</span>
+                <span class="value" id="lives">3</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Game Area -->
+    <main>
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="screen active">
+            <div class="welcome-content">
+                <h2>Welcome to No Coding Game!</h2>
+                <p>🎯 Click on the moving targets to earn points</p>
+                <p>⚡ The game gets faster with each level</p>
+                <p>❤️ You have 3 lives - don't lose them all!</p>
+                <button id="startBtn" class="btn btn-primary">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <div class="game-container">
+                <div id="gameArea" class="game-area">
+                    <!-- Targets will be spawned here -->
+                </div>
+                <div class="game-info">
+                    <p>Combo: <span id="combo">0</span>x</p>
+                    <p>Time: <span id="timer">60</span>s</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Level Complete Screen -->
+        <div id="levelCompleteScreen" class="screen">
+            <div class="modal-content">
+                <h2>🎉 Level Complete!</h2>
+                <div class="result-info">
+                    <p>Level: <span id="resultLevel">1</span></p>
+                    <p>Score: <span id="resultScore">0</span></p>
+                    <p>Combo: <span id="resultCombo">0</span>x</p>
+                </div>
+                <button id="nextLevelBtn" class="btn btn-primary">Next Level</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen">
+            <div class="modal-content">
+                <h2>💀 Game Over!</h2>
+                <div class="result-info">
+                    <p>Final Score: <span id="finalScore">0</span></p>
+                    <p>Levels Reached: <span id="levelsReached">1</span></p>
+                </div>
+                <button id="restartBtn" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pauseScreen" class="screen">
+            <div class="modal-content">
+                <h2>⏸ Paused</h2>
+                <p>Click to resume or press ESC</p>
+                <button id="resumeBtn" class="btn btn-primary">Resume</button>
+                <button id="quitBtn" class="btn btn-secondary">Quit</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button id="pauseBtn" class="btn btn-small">⏸ Pause</button>
+        <button id="soundBtn" class="btn btn-small">🔊 Sound On</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
